@@ -1,0 +1,69 @@
+/*BLOCK*/
+.blocks {
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(2, auto);
+  grid-row-gap: 70px;
+  justify-content: space-between;
+}
+.blocks a {
+  display: flex;
+  flex-direction: column;
+}
+
+/*LIST*/
+.list {
+  grid-template-columns: repeat(1, 850px);
+  grid-template-rows: repeat(6, 1fr);
+  justify-content: center;
+}
+.list .wrapper {
+  flex-direction: row;
+  width: 850px;
+  border: 1px solid #fead00;
+  box-shadow: none;
+}
+.list a {
+  display: flex;
+  flex-direction: row;
+}
+.list .film__picture {
+  width: 250px;
+}
+.list .film__info {
+  justify-content: center;
+  width: 600px;
+  font-size: 18px;
+  background-color: black;
+}
+
+.list .film__title {
+  width: 100%;
+  font-size: 40px;
+}
+.list .film__info div {
+  text-align: center;
+  width: 100%;
+  padding: 5px 0;
+}
+.list .lds-ripple {
+  margin: 0;
+}
+
+/*FAV*/
+.absolute {
+  position: absolute;
+  color: white;
+  opacity: 0.5;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.blocks span.absolute {
+  top: 5px;
+  right: 5px;
+}
+
+.list span.absolute {
+  top: 5px;
+  right: 5px;
+}
