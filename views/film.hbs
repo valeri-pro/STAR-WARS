@@ -1,0 +1,141 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="http://localhost:3020/css/film.css" />
+    <link rel="stylesheet" href="http://localhost:3020/css/favorites.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap"
+      rel="stylesheet"
+    />
+    <title> Film </title>
+  </head>
+  <body>
+    <!--ИЗБРАННОЕ-->
+    <div class="container--for__favorites">
+      <div id="favoritesContainer" class="favorites">
+        <div class="header--for__favorites">
+          <span id="closeFavorites" class="material-icons-outlined">
+            close
+          </span>
+        </div>
+        <div id="favoritesItemsContainer"></div>
+      </div>
+    </div>
+
+    <div class="header">
+      <div class="header--part">
+        <div class="header--part--small">
+          <a href="http://localhost:3020"><span class="material-icons-outlined">
+              home
+            </span></a>
+          <span id="openFavorites" class="material-icons-outlined">
+            favorite
+          </span>
+        </div>
+      </div>
+      <div class="header--part">
+        <a href="/authorization">
+          <span class="material-icons-outlined"> emoji_people </span>
+        </a>
+      </div>
+    </div>
+
+    <div class="page--first">
+      <div class="container--for__film">
+        <div class="container--for__picture">
+          <img
+            class="film__picture"
+            src="http://localhost:3020/posters/{{film.episode_id}}.jpg"
+          />
+          <span
+            id="{{film.episode_id}}"
+            class="material-icons-outlined absolute"
+            onclick="addToFavorites({{film.episode_id}})"
+          > favorite </span>
+        </div>
+
+        <div class="film__info">
+          <h1 class="film__title">
+            {{film.title}}
+          </h1>
+          <div class="film__episode"> Episode: {{film.episode_id}} </div>
+          <div class="film__date"> Release date: {{film.release_date}} </div>
+          <div class="film__description">
+            Description:
+          </div>
+          <div class="description"> {{film.opening_crawl}} </div>
+          <a href="#actors"><div> Actors... </div></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="page--second">
+      <h3 id="actors">ACTORS</h3>
+      <div class="film__actors">
+        Actors:
+        <br />
+        <div class="container--for__actors">
+          <div class="actors">
+            <div class="wrapper">
+              <p class="actor__name"> {{actorFirst.name}}</p>
+              <img class="actor__picture" src="{{actorFirst.image}}" />
+              <a href="{{actorFirst.wiki}}"><div class="actor__wiki">
+                  Wikipedia
+                </div></a>
+            </div>
+            <div class="wrapper">
+              <p class="actor__name"> {{actorSecond.name}}</p>
+              <img class="actor__picture" src="{{actorSecond.image}}" />
+              <a href="{{actorSecond.wiki}}"><div class="actor__wiki">
+                  Wikipedia
+                </div></a>
+            </div>
+            <div class="wrapper">
+              <p class="actor__name"> {{actorThird.name}}</p>
+              <img class="actor__picture" src="{{actorThird.image}}" />
+              <a href="{{actorThird.wiki}}"><div class="actor__wiki">
+                  Wikipedia
+                </div></a>
+            </div>
+            <div class="wrapper">
+              <p class="actor__name"> {{actorFourth.name}}</p>
+              <img class="actor__picture" src="{{actorFourth.image}}" />
+              <a href="{{actorFourth.wiki}}"><div class="actor__wiki">
+                  Wikipedia
+                </div></a>
+            </div>
+            <div class="wrapper">
+              <p class="actor__name"> {{actorFifth.name}}</p>
+              <img class="actor__picture" src="{{actorFifth.image}}" />
+              <a href=" {{actorFifth.wiki}}"><div class="actor__wiki">
+                  Wikipedia
+                </div></a>
+            </div>
+            <div class="lds-ripple hidden"><div></div><div></div></div>
+          </div>
+          <div class="center"> <button id="loadMore"> LOAD MORE </button></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const urls =
+      {{{url}}};
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="http://localhost:3020/js/localstorage.js"></script>
+    <script src="http://localhost:3020/js/data.js"></script>
+    <script src="http://localhost:3020/js/actors.js"></script>
+    <script src="http://localhost:3020/js/selected-favorites.js"></script>
+    <script src="http://localhost:3020/js/favorites.js"></script>
+
+  </body>
+</html>

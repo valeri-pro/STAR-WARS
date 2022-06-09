@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="http://localhost:3020/css/form.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title> Authorization </title>
+  </head>
+  <body>
+    <div class="header">
+      <a href="http://localhost:3020"><span class="material-icons-outlined">
+          home
+        </span></a>
+    </div>
+
+    <div class="container--for__form">
+      <form class="form--authorization" onsubmit="login(event)">
+        <div class="wrapper--authorization">
+          <label for="userName">
+            Username:
+            <br />
+            <input type="text" id="userName" name="userName" />
+          </label>
+          <label for="password">
+            Password:
+            <br />
+            <input type="password" id="password" name="userPassword" />
+          </label>
+          <button class="authorization" type="submit">Sign IN</button>
+          <p class="absolute">
+            Don't have an account?
+            <button class="registration"><a href="/registration">Sign Up</a>
+            </button>
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="http://localhost:3020/js/authorization.js"></script>
+  </body>
+</html>

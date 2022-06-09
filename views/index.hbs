@@ -1,0 +1,87 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="http://localhost:3020/css/styles.css" />
+    <link rel="stylesheet" href="http://localhost:3020/css/block-list.css" />
+    <link rel="stylesheet" href="http://localhost:3020/css/favorites.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title> All films </title>
+  </head>
+  <body>
+    <!--ИЗБРАННОЕ-->
+    <div class="container--for__favorites">
+      <div id="favoritesContainer" class="favorites">
+        <div class="header--for__favorites">
+          <span id="closeFavorites" class="material-icons-outlined">
+            close
+          </span>
+        </div>
+        <div id="favoritesItemsContainer"></div>
+      </div>
+    </div>
+
+    <div class="header--common">
+      <div class="header">
+        <div class="header--part">
+          <div class="header--part--small">
+            <a href="http://localhost:3020">
+              <span class="material-icons-outlined">
+                home
+              </span></a>
+            <span id="openFavorites" class="material-icons-outlined">
+              favorite
+            </span>
+          </div>
+        </div>
+        <div class="header--part">
+          <a href="/authorization">
+            <span class="material-icons-outlined"> emoji_people </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="header">
+        <div class="header--part">
+          <span> Sort by </span>
+          <select name="sort">
+            <option value="episodeAsc"> episode (up) </option>
+            <option value="episodeDsc"> episode (down) </option>
+            <option value="dateAsc"> realese date (up) </option>
+            <option value="dateDsc"> realese date (down) </option>
+          </select>
+        </div>
+
+        <div class="header--part">
+          <div class="header--part--small">
+            <span id="list" class="material-icons-outlined"> view_list </span>
+            <span id="module" class="material-icons-outlined">
+              view_module
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container--main">
+
+      <div class="container--for__films"></div>
+    </div>
+
+    <script>
+      const container = document.querySelector(".container--for__films");
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="http://localhost:3020/js/localstorage.js"></script>
+    <script src="http://localhost:3020/js/loader.js"></script>
+    <script src="http://localhost:3020/js/data.js"></script>
+    <script src="http://localhost:3020/js/render.js"></script>
+    <script src="http://localhost:3020/js/sort.js"></script>
+    <script src="http://localhost:3020/js/list-block.js"></script>
+    <script src="http://localhost:3020/js/favorites.js"></script>
+  </body>
+</html>

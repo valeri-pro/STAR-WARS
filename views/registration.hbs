@@ -1,0 +1,66 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="http://localhost:3020/css/form.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title> Registration </title>
+  </head>
+  <body>
+    <div class="header">
+      <a href="http://localhost:3020"><span class="material-icons-outlined">
+          home
+        </span></a>
+    </div>
+
+    <div class="container--for__form">
+      <form class="user-form form--registration" onsubmit="createUser(event)">
+        <div class="wrapper--registration">
+          <h2>Welcome</h2>
+          <div class="image-uploader">
+            <div
+              class="select-file material-icons-outlined"
+              onclick="imageInput.click()"
+            >add_a_photo</div>
+            <input id="imageInput" type="file" name="image" required />
+            <div class="image-preview-container hidden">
+              <img class="image-preview" id="imagePreview" />
+              <span
+                class="delete-image-button material-icons-outlined"
+                onclick="deleteImage()"
+              > cancel</span>
+            </div>
+          </div>
+          <label for="userName">
+            Username:
+            <br />
+            <input type="text" id="userName" name="userName" />
+          </label>
+          <label for="email">
+            Email:
+            <br />
+            <input type="email" id="email" name="userEmail" />
+          </label>
+          <label for="password">
+            Password:
+            <br />
+            <input
+              type="password"
+              id="password"
+              name="userPassword"
+              maxlength="9"
+            />
+          </label>
+          <button class="authorization" type="submit">Sign UP</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="http://localhost:3020/js/registration.js"></script>
+  </body>
+</html>
